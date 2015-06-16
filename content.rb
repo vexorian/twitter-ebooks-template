@@ -1,4 +1,5 @@
 # encoding: UTF-8
+require 'twitter_ebooks'
 
 SPECIAL_WORDS = [ 'hypothenuse', 'algebra', 'antidisestablishmentarianism' ]
 TOKEN_BLACKLIST = ['ebooks', 'bot', 'bots', 'to', 'the', 'a', 'twitter']
