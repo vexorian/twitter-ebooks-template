@@ -19,8 +19,8 @@ class Content
         ## these are keywords that make tweets more likely to get faved, RTed
         ## or replied (some restrictions in botconfig.rb apply)
         ## We simply get the most used keywords from the model.
-        inter = @model.keywords.top(TOP_INTERESTING).map{ |s| s.to_s.downcase }
-        cool = @model.keywords.top(TOP_COOL).map{ |s| s.to_s.downcase }
+        inter = @model.keywords.take(TOP_INTERESTING).map{ |s| s.to_s.downcase }
+        cool = @model.keywords.take(TOP_COOL).map{ |s| s.to_s.downcase }
         ## Because of the most popular example, ebooks bots have become infamous
         ## for always favoriting tweets containing words like 'bot' and 'ebooks'.
         ## Although this template doesn't use those words in the SPECIAL_WORDS
